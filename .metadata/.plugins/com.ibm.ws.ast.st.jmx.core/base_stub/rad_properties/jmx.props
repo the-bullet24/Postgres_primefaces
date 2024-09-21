@@ -1,0 +1,2 @@
+always.use.jre.trust.key.stores.nonibm=true
+jre.home.path.nonibm=C:/Users/percy/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.2.v20240802-1626/jre

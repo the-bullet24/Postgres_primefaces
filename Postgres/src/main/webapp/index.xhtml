@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Formulario PrimeFaces</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <p:panel header="Registro de Usuario">
+            <h:panelGrid columns="2" cellpadding="5">
+                <p:outputLabel for="nombre" value="Nombre:" />
+                <p:inputText id="nombre" value="#{usuarioBean.nombre}" required="true" />
+
+                <p:outputLabel for="email" value="Email:" />
+                <p:inputText id="email" value="#{usuarioBean.email}" required="true" />
+
+                <p:outputLabel for="fecha" value="Fecha de Nacimiento:" />
+                <p:calendar id="fecha" value="#{usuarioBean.fechaNacimiento}" pattern="dd/MM/yyyy" />
+
+                <p:outputLabel for="password" value="Contraseña:" />
+                <p:password id="password" value="#{usuarioBean.password}" required="true" feedback="true" />
+
+                <p:outputLabel for="genero" value="Género:" />
+                <p:selectOneRadio id="genero" value="#{usuarioBean.genero}">
+                    <f:selectItem itemLabel="Masculino" itemValue="M" />
+                    <f:selectItem itemLabel="Femenino" itemValue="F" />
+                </p:selectOneRadio>
+
+                <p:outputLabel for="intereses" value="Intereses:" />
+                <p:selectManyCheckbox id="intereses" value="#{usuarioBean.intereses}">
+                    <f:selectItem itemLabel="Deportes" itemValue="deportes" />
+                    <f:selectItem itemLabel="Música" itemValue="musica" />
+                    <f:selectItem itemLabel="Tecnología" itemValue="tecnologia" />
+                </p:selectManyCheckbox>
+            </h:panelGrid>
+
+            <p:commandButton value="Registrar" action="#{usuarioBean.registrar}" update="mensajes" />
+        </p:panel>
+
+        <p:growl id="mensajes" showDetail="true" />
+    </h:form>
+</h:body>
+</html>

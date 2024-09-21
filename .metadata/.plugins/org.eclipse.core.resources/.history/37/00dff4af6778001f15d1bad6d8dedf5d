@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Página de PrimeFaces</title>
+</h:head>
+<h:body>
+
+    <h:form>
+        <p:inputText value="#{bean.text}" placeholder="Escribe algo" />
+        <p:commandButton value="Enviar" action="#{bean.submit}" />
+    </h:form>
+
+    <h:outputText value="Texto ingresado: #{bean.text}" />
+    
+</h:body>
+</html>

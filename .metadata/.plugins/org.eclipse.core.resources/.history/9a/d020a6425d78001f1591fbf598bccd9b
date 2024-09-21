@@ -1,0 +1,14 @@
+package pe.com.DAO;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import pe.com.DTO.UserDTO;
+
+public interface UserDAO {
+
+	List <UserDTO> getListar() throws SQLException;
+	
+	UserDTO getId( int id );
+	
+}

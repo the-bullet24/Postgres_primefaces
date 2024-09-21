@@ -1,0 +1,23 @@
+package pe.com.DAO;
+
+import java.util.List;
+
+import pe.com.DTO.UserDTO;
+
+public class UserDAOImpl implements UserDAO{
+
+	@Override
+	public List<UserDTO> getListar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserDTO getId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

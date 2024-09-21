@@ -1,0 +1,43 @@
+package pe.com.DAO;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import pe.com.DTO.UserDTO;
+import pe.com.conexion.Conexion;
+
+public class UserDAOImpl implements UserDAO{
+
+	Conexion connec ;  
+	
+	
+	@Override
+	public List<UserDTO> getListar() {
+		
+		List <UserDTO> user = new ArrayList<>();	
+		
+		String query = "SELECT * FROM \"Usuario\"";
+		
+		try ( Connection cnx = connec.getConexion();
+			  Statement stmt = cnx.createStatement();
+	          ResultSet rs = stmt.executeQuery(query)){
+			
+			
+		} 
+		
+		
+		return   s;
+	}
+
+	@Override
+	public UserDTO getId(int id) {
+
+		return null;
+	}
+	
+	
+
+}
